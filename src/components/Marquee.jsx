@@ -6,7 +6,7 @@ const LatestPrices = async () => {
   const data = await res.json();
     const prices = data.slice(0, 10);
   
-  console.log(data)
+  
     return (
      <div className="w-full overflow-hidden bg-red-700 text-white">
       <MarqueeText
