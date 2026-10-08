@@ -3,9 +3,8 @@ import {CategoryLinks} from "./CategoryLinks";
 
 
 const Navbar = async () => {
-  const res = await fetch(
-    "https://api.api-store.workers.dev/api/bazardor/categories",
-    { cache: "no-store" }
+ const res = await fetch(
+    "https://api.api-store.workers.dev/api/bazardor/categories"
   );
 
   const categories = await res.json();

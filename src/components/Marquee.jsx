@@ -21,7 +21,7 @@ const LatestPrices = async () => {
           return (
             <Link
               key={price.id}
-              href={`/products/${price.id}`}
+              href={`/products/${price.slug}`}
               className="mx-6 whitespace-nowrap hover:underline"
             >
               <span>

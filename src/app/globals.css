@@ -4,5 +4,6 @@
 }
 
 body {
+  background-color: white;
   font-family: var(--font-bangla), sans-serif;
 }

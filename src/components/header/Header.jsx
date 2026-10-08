@@ -6,12 +6,12 @@ import Link from "next/link";
 import Navbar from "./Navbar";
 import CurrentDate from "./CurrentDate";
 import Marquee from "../Marquee";
-
+import { Suspense } from "react";
 
 const Header = () => {
 
 
-    
+
     return (
         <>
             <div className="relative mx-auto flex w-full max-w-7xl items-center justify-start px-4 py-4 sm:px-6 lg:px-8">
@@ -39,27 +39,30 @@ const Header = () => {
                     </div>
                 </Link>
                 <div className="absolute right-4 flex gap-2 " >
-                     <Link href="/sign-in"> 
-                    <button className="rounded-md border border-red-500 px-4 py-2 text-black hover:bg-red-600">
-                        সাইন ইন
-                    </button>
-                </Link>
+                    <Link href="/sign-in">
+                        <button className="rounded-md border border-red-500 px-4 py-2 text-black hover:bg-red-600">
+                            সাইন ইন
+                        </button>
+                    </Link>
                     <Link href="/sign-up">
                         <button className="rounded-md bg-red-500 px-4 py-2 text-white hover:bg-red-600">
                             সাইন আপ
                         </button>
                     </Link>
-                    </div>
+                </div>
             </div>
 
-            <div>
-                <Navbar />
-            </div>
-            <div>
-              <Marquee/>
-            </div>
+        
+                <Suspense fallback={<div className="h-12" />}>
+                    <Navbar />
+                </Suspense>
+                <Suspense fallback={<div className="h-12" />}>
+                    <Marquee />
+                </Suspense>
             
-            
+           
+
+
         </>
     );
 };

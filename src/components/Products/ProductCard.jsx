@@ -15,7 +15,7 @@ const getUnitText = (unit) => {
 };
 
 const ProductCard = ({ product }) => {
-    const { dir, pct } = product.change;
+   const { dir, pct } = product.change || {};
 
     const badge =
         dir === "up"
