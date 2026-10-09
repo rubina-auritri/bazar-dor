@@ -1,3 +1,6 @@
+
+import { notFound } from "next/navigation";
+
 const toBn = (value) =>
   String(value ?? "").replace(/\d/g, (digit) => "০১২৩৪৫৬৭৮৯"[digit]);
 
@@ -38,6 +41,9 @@ const ProductDetails = ({ product }) => {
     markets.length > 0
       ? Math.max(...markets.map((market) => Number(market.max)))
       : 0;
+      if (!product || !product._id) {
+    notFound();
+  }
 
   return (
     <div className="mx-auto max-w-5xl space-y-5 p-4">
