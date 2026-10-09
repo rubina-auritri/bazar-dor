@@ -9,7 +9,7 @@ import Marquee from "../Marquee";
 import { Suspense } from "react";
 import ButtonAction from "./ButtonAction";
 
-const Header = ({session}) => {
+const Header = () => {
 
 
 
@@ -39,7 +39,7 @@ const Header = ({session}) => {
                         </p>
                     </div>
                 </Link>
-                <div className="absolute right-4 flex gap-4 "><ButtonAction  session={session}/></div>
+                <div className="absolute right-4 flex gap-4 "><ButtonAction  /></div>
             </div>
 
         
