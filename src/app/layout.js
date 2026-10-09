@@ -4,6 +4,8 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/Footer/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +27,10 @@ export const metadata = {
   description: "বাংলাদেশের বাজারদর",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const session = await auth.api.getSession({
+headers: await headers(),
+});
   return (
     <html
       lang="bn"
@@ -33,7 +38,7 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white">
-        <Header />
+        <Header session={session} />
         {children}
         <ToastContainer position="top-right" />
         <Footer />

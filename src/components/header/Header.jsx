@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import CurrentDate from "./CurrentDate";
 import Marquee from "../Marquee";
 import { Suspense } from "react";
+import ButtonAction from "./ButtonAction";
 
 const Header = () => {
 
@@ -38,18 +39,7 @@ const Header = () => {
                         </p>
                     </div>
                 </Link>
-                <div className="absolute right-4 flex gap-2 " >
-                    <Link href="/sign-in">
-                        <button className="rounded-md border border-red-500 px-4 py-2 text-black hover:bg-red-600">
-                            সাইন ইন
-                        </button>
-                    </Link>
-                    <Link href="/sign-up">
-                        <button className="rounded-md bg-red-500 px-4 py-2 text-white hover:bg-red-600">
-                            সাইন আপ
-                        </button>
-                    </Link>
-                </div>
+                <div className="absolute right-4 flex gap-4 "><ButtonAction /></div>
             </div>
 
         
