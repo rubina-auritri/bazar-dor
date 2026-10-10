@@ -3,7 +3,7 @@ import CategoryProducts from "@/components/Products/CategoryProducts";
 import { notFound } from "next/navigation";
 
 const API_URL =
-  "https://api.api-store.workers.dev/api/bazardor/products";
+  "https://api.abcz.workers.dev/api/bazardor/products";
 
 const CategoryPage = async ({ params }) => {
   const { slug } = await params;
