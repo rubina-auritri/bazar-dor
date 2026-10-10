@@ -8,7 +8,7 @@ const LatestPrices = async () => {
   
   
     return (
-     <div className="w-full overflow-hidden bg-red-700 text-white">
+     <div className=" overflow-hidden bg-red-700 text-white">
       <MarqueeText
         direction="right"
         duration={20}

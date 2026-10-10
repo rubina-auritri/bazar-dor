@@ -10,7 +10,7 @@ const Navbar = async () => {
   const categories = await res.json();
 
   return (
-    <nav className="flex w-full items-center justify-center gap-4 bg-red-500 py-2 text-white">
+    <nav className="flex w-full items-center justify-center gap-4 bg-white-500 py-2 text-black">
       
 <CategoryLinks categories={categories} />
       

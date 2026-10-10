@@ -4,7 +4,7 @@ import AllProducts from "./AllProducts";
 
 const ProductSections = ({ products }) => {
   return (
-    <main className="container mx-auto px-4">
+    <main className="mx-auto w-full max-w-6xl px-3 sm:px-4 lg:px-6 py-6 sm:py-8 space-y-8 sm:space-y-10">
       <RisingProducts products={products} />
 
       <FallingProducts products={products} />

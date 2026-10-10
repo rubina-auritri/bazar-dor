@@ -1,13 +1,14 @@
+
 "use client";
 
-import { useEffect, useState } from "react";
-
 export default function CurrentDate() {
-  const [date, setDate] = useState("");
+  const date = new Date().toLocaleDateString("bn-BD", {
+    dateStyle: "full",
+  });
 
-  useEffect(() => {
-    setDate(new Date().toLocaleDateString("bn-BD"));
-  }, []);
-
-  return <span>{date}</span>;
+  return (
+    <p className="text-sm font-medium text-base-content">
+      {date}
+    </p>
+  );
 }

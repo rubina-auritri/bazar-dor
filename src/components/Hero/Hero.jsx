@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import CurrentDate from "../header/CurrentDate";
 
 const Hero = () => {
   return (
@@ -9,27 +10,28 @@ const Hero = () => {
 
           {/* Left Content */}
           <div>
-            {/* Eyebrow / Small Text */}
-            <p className="mb-3 text-sm font-semibold text-primary">
-              আজকের বাজারদর
-            </p>
+
+            <span className="inline-block rounded-md bg-red-100 px-3 py-1 text-sm font-semibold text-red-700 mb-4">
+              <CurrentDate />
+            </span>
+
+
 
             {/* Main Heading */}
-            <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-bold leading-tight md:text-5xl lg:text-6xl">
               প্রতিদিনের পণ্যের{" "}
-              <span className="text-primary">সর্বশেষ দাম</span>
+              <span className="text-red-900">সর্বশেষ দাম</span>
             </h1>
 
             {/* Subtitle */}
             <p className="mt-5 max-w-xl text-base-content/70 md:text-lg">
-              চাল, ডাল, তেল, সবজি ও অন্যান্য প্রয়োজনীয় পণ্যের
-              আজকের বাজারদর এক জায়গায় সহজেই দেখুন।
+              চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম ও মসলার দাম — বাজারভিত্তিক বিস্তারিত, গড়, সর্বনিম্ন-সর্বাধিক এবং দামের পরিবর্তন এক জায়গায়।
             </p>
 
             {/* CTA Button */}
             <a
               href="#সব-পণ্য"
-              className="btn btn-primary mt-7"
+              className="btn mt-7 border-red-200 bg-red-100 text-red-700 hover:border-red-300 hover:bg-red-200"
             >
               সব পণ্যের দাম দেখুন
             </a>
@@ -41,8 +43,8 @@ const Hero = () => {
               src="/bazar-hero.png"
               alt="আজকের বাজারদর"
               className="w-full max-w-xl rounded-2xl object-cover shadow-lg"
-                width={500}
-                height={500}
+              width={500}
+              height={500}
             />
           </div>
 
