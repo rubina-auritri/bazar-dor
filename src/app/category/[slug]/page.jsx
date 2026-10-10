@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CategoryProducts from "@/components/Products/CategoryProducts";
+import { notFound } from "next/navigation";
 
 const API_URL =
   "https://api.api-store.workers.dev/api/bazardor/products";
@@ -18,7 +19,11 @@ const CategoryPage = async ({ params }) => {
   const products = await res.json();
 
   if (!products || products.length === 0) {
-    return <CategoryNotFound />;
+     
+       
+          notFound();
+     
+   
   }
 
   return (

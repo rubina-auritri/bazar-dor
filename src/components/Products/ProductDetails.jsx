@@ -15,7 +15,13 @@ const getUnitText = (unit) => {
   return units[unit] || unit;
 };
 
+
 const ProductDetails = ({ product }) => {
+  // If product does not exist, show 404
+  if (!product) {
+    notFound();
+  }
+  
   const today = Number(product.today);
   const yesterday = Number(product.yesterday ?? today);
 
@@ -41,9 +47,8 @@ const ProductDetails = ({ product }) => {
     markets.length > 0
       ? Math.max(...markets.map((market) => Number(market.max)))
       : 0;
-      if (!product || !product._id) {
-    notFound();
-  }
+      
+   
 
   return (
     <div className="mx-auto max-w-5xl space-y-5 p-4">
